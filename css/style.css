@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.page-container {
+  max-width: 1200px;
+  min-width: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */
