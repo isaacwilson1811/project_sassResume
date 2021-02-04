@@ -1,22 +1,12 @@
 @use 'reset';
+@use 'fontstyle';
 @use 'vars';
 @mixin border($side){
-    border-#{$side}: 1px solid map-get(vars.$colors,border);
-}
-
-h1{
-    font-family: 'Permanent Marker', cursive;
-}
-h2 {
-    font-family: 'Philosopher', sans-serif;
-}
-p, li {
-font-family: 'Roboto', sans-serif;
+    border-#{$side}: 1px dashed map-get(vars.$colors,border);
 }
 body{
-    letter-spacing: 0.2rem;
     color: map-get(vars.$colors,text);
-    background-color: map-get(vars.$colors,bg);
+    background-color: map-get(vars.$colors,bg-darker);
     background-image: url(../images/body_bg.png);
     background-repeat: no-repeat;
     background-position: top left;
@@ -24,51 +14,39 @@ body{
 }
 .page-container{
     position:relative;
-    max-width: 1100px;
+    max-width: 1000px;
     min-width:650px;
+    height:auto;
     margin:2.5em auto;
     padding:5em;
     background-color: map-get(vars.$colors,bg);
     box-shadow: -16px 16px 64px 16px rgba(0, 0, 0, 0.8);
     .header-img{
+        position:absolute;
+        top:0;
+        right:0;
         width:100%;
-        height:500px;
+        height:600px;
         background-image: url(../images/header_bg.png);
         background-repeat: no-repeat;
         background-position: top right;
-        background-size: contain;
-        position: absolute;
-        top:0;
-        right:0;
+        background-size: 50%;
     }
     .header-container{
+        position:absolute;
+        top:5em;
+        padding-top:3em;
         margin-bottom:2em;
-        width:50%;
-        display:flex;
-        flex-direction:column;
-        // outline:2px solid yellow;
-        // background-color: map-get(vars.$colors,bg);
-        text-transform: uppercase;
-        h1{
-            font-size: 3rem;
-        }
-        span{
-            font-size: 1.5rem;
-            color: map-get(vars.$colors,border);
-        }
     }
     .content-container{
+        position:relative;
+        top:14em;
         display:flex;
         justify-content: center;
         &__col-left{
             flex-grow: 1;
+            flex-basis: 200px;
             @include border(top);
-            .content-section{
-                h2{
-                    font-size: 1.75rem;
-                    text-transform: uppercase;
-                }
-            }
         }
         &__col-mid{
             width:16px;
@@ -78,14 +56,10 @@ body{
         &__col-right{
             flex-grow:3;
             .content-section:nth-child(1){
-                // width:80%;
+                width:20em;
             }
             .content-section{
                 @include border(top);
-                h2{
-                    font-size: 1.75rem;
-                    text-transform: uppercase;
-                }
             }
         }
     }
