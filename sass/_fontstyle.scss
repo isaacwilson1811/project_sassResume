@@ -11,26 +11,36 @@
 .title-h2{
     margin-top:1em;
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.45rem;
     letter-spacing: 0.2rem;
     padding-left:0.2em;
     color:map-get(vars.$colors,text-light);
     text-transform: uppercase;
 }
-
 .underline{
     background:map-get(vars.$colors,text);
     width:3em;
     height:4px;
     border-radius: 4px;
-    margin:1em 0;
+    margin:0.3em 0;
 }
-
 h2{
+    margin-top:2em;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.4rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.19rem;
     color:map-get(vars.$colors,text);
     text-transform: uppercase;
+}
+.p-bold{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin:1em 0;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
 }

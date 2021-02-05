@@ -4,6 +4,10 @@
 @mixin border($side){
     border-#{$side}: 1px dashed map-get(vars.$colors,border);
 }
+%generic-flex{
+    display:flex;
+    justify-content:space-evenly;
+}
 body{
     color: map-get(vars.$colors,text);
     background-color: map-get(vars.$colors,bg-darker);
@@ -20,7 +24,10 @@ body{
     margin:2.5em auto;
     padding:5em;
     background-color: map-get(vars.$colors,bg);
-    box-shadow: -16px 16px 64px 16px rgba(0, 0, 0, 0.8);
+    background-image: url(../images/fade.png);
+    background-blend-mode:luminosity;
+    background-repeat: repeat;
+    box-shadow: -32px 16px 64px 0px rgba(0, 0, 0, 0.5);
     .header-img{
         position:absolute;
         top:0;
@@ -46,6 +53,7 @@ body{
         &__col-left{
             flex-grow: 1;
             flex-basis: 200px;
+            padding-right:16px;
             @include border(top);
         }
         &__col-mid{
@@ -60,6 +68,9 @@ body{
             }
             .content-section{
                 @include border(top);
+                .social-flex{
+                    @extend %generic-flex;
+                }
             }
         }
     }
