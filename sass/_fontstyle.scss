@@ -2,7 +2,7 @@
 .name-h1 {
     font-family: 'Philosopher', sans-serif;
     font-weight: 400;
-    font-size: 3.5rem;
+    font-size:map-get(vars.$sizes,name-h1);
     letter-spacing: 0.5rem;
     line-height: 3rem;
     text-transform: uppercase;
@@ -12,7 +12,7 @@
     margin-top:1em;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 1.45rem;
+    font-size:map-get(vars.$sizes,title-h2);
     letter-spacing: 0.2rem;
     padding-left:0.2em;
     color:map-get(vars.$colors,text-light);
@@ -28,14 +28,14 @@
 h2{
     margin-top:1em;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+    font-size: map-get(vars.$sizes,h2);
     letter-spacing: 0.19rem;
     color:map-get(vars.$colors,text);
     text-transform: uppercase;
 }
 .p-bold{
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: map-get(vars.$sizes,p-bold);
     font-weight: 700;
     text-transform: uppercase;
     margin:1em 0;
@@ -45,7 +45,7 @@ h2{
 }
 p{
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
+    font-size: map-get(vars.$sizes,p);
 }
 img{
     position:relative;
