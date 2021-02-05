@@ -18,14 +18,13 @@ body{
 }
 .page-container{
     position:relative;
-    max-width: 1000px;
+    max-width: 900px;
     min-width:650px;
     height:auto;
     margin:2.5em auto;
     padding:5em;
     background-color: map-get(vars.$colors,bg);
     background-image: url(../images/fade.png);
-    background-blend-mode:luminosity;
     background-repeat: repeat;
     box-shadow: -32px 16px 64px 0px rgba(0, 0, 0, 0.5);
     .header-img{
@@ -57,7 +56,7 @@ body{
             @include border(top);
         }
         &__col-mid{
-            width:16px;
+            min-width:16px;
             @include border(top);
             @include border(left);
         }
@@ -70,6 +69,18 @@ body{
                 @include border(top);
                 .social-flex{
                     @extend %generic-flex;
+                }
+                .flex-row{
+                    @extend %generic-flex;
+                    justify-content: start;
+                    align-items: flex-start;
+                    div:nth-child(2){
+                        max-width:400px;
+                        margin-left:3em;
+                    }
+                    .p-bold{
+                        margin:0;
+                    }
                 }
             }
         }
